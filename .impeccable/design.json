@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-24T21:09:44Z",
+  "title": "Design System: Nilton City",
+  "extensions": {
+    "colorMeta": {
+      "sunset-pink": {"role":"primary","displayName":"Sunset Pink","tonalRamp":["oklch(15% 0.08 350)","oklch(25% 0.08 350)","oklch(35% 0.08 350)","oklch(45% 0.08 350)","oklch(55% 0.08 350)","oklch(65% 0.08 350)","oklch(80% 0.08 350)","oklch(95% 0.08 350)"]},
+      "sunset-pink-hover": {"role":"primary","displayName":"Sunset Pink Hover","tonalRamp":["oklch(15% 0.05 350)","oklch(25% 0.05 350)","oklch(35% 0.05 350)","oklch(45% 0.05 350)","oklch(55% 0.05 350)","oklch(65% 0.05 350)","oklch(80% 0.05 350)","oklch(95% 0.05 350)"]},
+      "activity-lilac": {"role":"secondary","displayName":"Activity Lilac","tonalRamp":["oklch(15% 0.1 310)","oklch(25% 0.1 310)","oklch(35% 0.1 310)","oklch(45% 0.1 310)","oklch(55% 0.1 310)","oklch(65% 0.1 310)","oklch(80% 0.1 310)","oklch(95% 0.1 310)"]},
+      "warm-ink": {"role":"neutral","displayName":"Warm Ink","tonalRamp":["oklch(15% 0.015 55)","oklch(25% 0.015 55)","oklch(35% 0.015 55)","oklch(45% 0.015 55)","oklch(55% 0.015 55)","oklch(65% 0.015 55)","oklch(80% 0.015 55)","oklch(95% 0.015 55)"]},
+      "dusk-muted": {"role":"neutral","displayName":"Dusk Muted","tonalRamp":["oklch(15% 0.04 335)","oklch(25% 0.04 335)","oklch(35% 0.04 335)","oklch(45% 0.04 335)","oklch(55% 0.04 335)","oklch(65% 0.04 335)","oklch(80% 0.04 335)","oklch(95% 0.04 335)"]},
+      "deep-plum": {"role":"neutral","displayName":"Deep Plum","tonalRamp":["oklch(15% 0.045 315)","oklch(25% 0.045 315)","oklch(35% 0.045 315)","oklch(45% 0.045 315)","oklch(55% 0.045 315)","oklch(65% 0.045 315)","oklch(80% 0.045 315)","oklch(95% 0.045 315)"]},
+      "panel-plum": {"role":"neutral","displayName":"Panel Plum","tonalRamp":["oklch(15% 0.045 320)","oklch(25% 0.045 320)","oklch(35% 0.045 320)","oklch(45% 0.045 320)","oklch(55% 0.045 320)","oklch(65% 0.045 320)","oklch(80% 0.045 320)","oklch(95% 0.045 320)"]},
+      "plum-line": {"role":"neutral","displayName":"Plum Line","tonalRamp":["oklch(15% 0.06 330)","oklch(25% 0.06 330)","oklch(35% 0.06 330)","oklch(45% 0.06 330)","oklch(55% 0.06 330)","oklch(65% 0.06 330)","oklch(80% 0.06 330)","oklch(95% 0.06 330)"]},
+      "focus-gold": {"role":"tertiary","displayName":"Focus Gold","tonalRamp":["oklch(15% 0.06 80)","oklch(25% 0.06 80)","oklch(35% 0.06 80)","oklch(45% 0.06 80)","oklch(55% 0.06 80)","oklch(65% 0.06 80)","oklch(80% 0.06 80)","oklch(95% 0.06 80)"]}
+    },
+    "typographyMeta": {
+      "display":{"displayName":"City Signage","purpose":"Condensed identity lettering; size remains specific to the hero."},
+      "headline":{"displayName":"Destination Heading","purpose":"Dialog headings and destination hierarchy."},
+      "body":{"displayName":"Reading Text","purpose":"Regular Barlow for descriptions and operating instructions."},
+      "label":{"displayName":"Control Label","purpose":"Navigation, common controls and project metadata."}
+    },
+    "shadows": [
+      {"name":"primary-low","value":"0 8px 22px #170b2729","purpose":"Low offset depth beneath pink actions."},
+      {"name":"nearby-project","value":"0 14px 35px #140b2490","purpose":"Float the nearby project prompt above the scene."},
+      {"name":"modal","value":"0 25px 90px #10091bcc","purpose":"Separate a protected reading surface from the city."}
+    ],
+    "motion": [
+      {"name":"overview-sweep","value":"0.9 + sin(orbit) * 0.13 radians","purpose":"Bounded city overview, optional and disabled initially for reduced motion."},
+      {"name":"camera-follow","value":"1 - exp(-min(delta, 0.05) * 5)","purpose":"Smooth camera follow when motion is enabled."},
+      {"name":"reduced-motion","value":"automatic orbit off; CSS animations and transitions disabled","purpose":"Respect the visitor's reduced-motion preference."}
+    ],
+    "breakpoints": [{"name":"mobile","value":"760px"},{"name":"wide","value":"1500px"},{"name":"short-desktop","value":"height 650px and width 761px"}]
+  },
+  "components": [
+    {"name":"Primary Action","kind":"button","refersTo":"button-primary","description":"Pink, compact and touch-friendly action.","html":"<button class=\"ds-primary\">Explorar a cidade</button>","css":".ds-primary{font:700 14px BarlowBody,Arial,sans-serif;background:var(--pink,#ffabc7);color:#2c1530;border:0;border-radius:6px;min-height:48px;padding:15px 21px;cursor:pointer;box-shadow:0 8px 22px #170b2729}.ds-primary:hover{background:#ffc5d4}.ds-primary:focus-visible{outline:3px solid #ffe1ad;outline-offset:5px}.ds-primary:disabled{opacity:.45;cursor:wait}"},
+    {"name":"Text Action","kind":"button","description":"Underlined secondary access without a container.","html":"<button class=\"ds-text\">Ver os projetos</button>","css":".ds-text{font:14px BarlowBody,Arial,sans-serif;color:var(--ink,#fff3ed);background:none;border:0;padding:12px 0;text-decoration:underline;text-decoration-color:#b98ea8;text-underline-offset:6px;cursor:pointer}.ds-text:hover{color:var(--pink,#ffabc7)}.ds-text:focus-visible{outline:3px solid #ffe1ad;outline-offset:5px}"},
+    {"name":"Navigation","kind":"nav","description":"Plain labels on controlled dark backing.","html":"<nav class=\"ds-nav\"><button>Projetos</button><button>Sobre</button><a href=\"https://github.com/NiltonBarross\">GitHub</a></nav>","css":".ds-nav{display:flex;gap:28px;background:linear-gradient(180deg,#21132df5,#21132dd9);padding:18px 24px}.ds-nav button,.ds-nav a{font:600 14px BarlowBody,Arial,sans-serif;color:var(--ink,#fff3ed);background:none;border:0;text-decoration:none;padding:8px 0;cursor:pointer}.ds-nav button:hover,.ds-nav a:hover{color:var(--pink,#ffabc7)}.ds-nav button:focus-visible,.ds-nav a:focus-visible{outline:3px solid #ffe1ad;outline-offset:5px}"},
+    {"name":"Project Row","kind":"custom","description":"Full-width directory row with a destination swatch and metadata.","html":"<button class=\"ds-project\"><span class=\"ds-swatch\"></span><span><strong>Market Atlas</strong><small>Inteligência de mercado · JavaScript · Leaflet</small></span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></button>","css":".ds-project{display:grid;grid-template-columns:6px 1fr 22px;align-items:center;gap:18px;width:100%;padding:19px 0;border:0;border-bottom:1px solid #77506d;background:var(--panel,#2d1b38);color:var(--ink,#fff3ed);text-align:left;cursor:pointer}.ds-project:hover{background:#3a2543}.ds-project:focus-visible{outline:3px solid #ffe1ad;outline-offset:5px}.ds-swatch{width:5px;height:35px;background:var(--pink,#ffabc7);border-radius:4px}.ds-project strong{display:block;font:500 19px BarlowBody,Arial,sans-serif;margin-bottom:5px}.ds-project small{display:block;font:14px BarlowBody,Arial,sans-serif;color:var(--muted,#dfbfd8)}.ds-project svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round}"},
+    {"name":"Landmark Label","kind":"chip","description":"Destination-colored edge and stem over the scene.","html":"<button class=\"ds-landmark\">Market Atlas</button>","css":".ds-landmark{position:relative;font:12px BarlowBody,Arial,sans-serif;background:#281832ed;color:#fff0ed;border:1px solid var(--pink,#ffabc7);border-radius:4px;padding:7px 10px;cursor:pointer}.ds-landmark:after{content:'';position:absolute;left:50%;top:100%;height:12px;border-left:1px solid var(--pink,#ffabc7)}.ds-landmark:hover{background:var(--pink,#ffabc7);color:#2b1630}.ds-landmark:focus-visible{outline:3px solid #ffe1ad;outline-offset:5px}"},
+    {"name":"Touch Direction","kind":"button","description":"Square-ish direction target with a stroked chevron.","html":"<button class=\"ds-direction\" aria-label=\"Avançar\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 14 7-7 7 7\"/></svg></button>","css":".ds-direction{width:50px;height:48px;display:flex;align-items:center;justify-content:center;background:#281630dc;color:var(--ink,#fff3ed);border:1px solid #c89ab0;border-radius:8px;cursor:pointer;touch-action:none}.ds-direction:active,.ds-direction:hover{background:#a36c9e}.ds-direction:focus-visible{outline:3px solid #ffe1ad;outline-offset:5px}.ds-direction svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}"}
+  ],
+  "narrative": {
+    "northStar":"A City at Dusk",
+    "overview":"The built identity joins a low-poly waterfront city with a calm, readable interface. Plum is the resting ground, coral-pink is the action color, and pale lilac identifies the contribution district. The scene supplies spectacle; interface surfaces supply orientation.\n\nCondensed display lettering gives the work its city-signage voice. The body face is the regular Barlow family, kept distinct from the condensed headings. Dark-backed navigation and instructions stay legible when pale geometry or the sun pass beneath them.",
+    "keyCharacteristics":["Original geometric city, warm horizon and palm-lined streets.","Large condensed lettering with a pink second line.","Dark plum controls over a brighter dimensional world.","Direct project access alongside exploration."],
+    "rules":[{"name":"The Backed Overlay Rule","body":"Navigation, driving instructions and scene captions keep controlled dark backing; they do not rely on the scene remaining dark.","section":"colors"},{"name":"The Two Voices Rule","body":"Use condensed lettering to name the place or destination, and regular Barlow to explain or operate it.","section":"typography"},{"name":"The Scene Carries Depth Rule","body":"Keep UI elevation subordinate to the rendered city; use a reading surface where text needs protection rather than decorating every control with glow.","section":"elevation"}],
+    "dos":["Do preserve dark backing under text that crosses the moving scene.","Do use pink for primary action and regular Barlow for explanations.","Do keep project access available without driving.","Do preserve the distinction between contribution towers, project destinations and decorative scenery."],
+    "donts":["Don't turn project rows into a grid of generic cards.","Don't place category labels above dialog titles.","Don't make automatic camera movement mandatory.","Don't use decorative geometry as evidence of contribution activity."]
+  }
+}

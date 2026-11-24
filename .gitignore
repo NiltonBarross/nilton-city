@@ -1,0 +1,10 @@
+.agents/
+.codex/
+.sites-runtime/
+.sites-checkout/
+node_modules/
+.specify/*
+!.specify/memory/
+.impeccable/*
+!.impeccable/design.json
+!.impeccable/surface.md
