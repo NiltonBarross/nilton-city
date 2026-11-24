@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#1c102d">
+  <meta name="description" content="Explore a cidade de contribuições de Nilton Luan e conheça projetos de dados, automação e inteligência artificial.">
+  <title>Nilton City — Dados, automação & IA</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#project-list">Ir para os projetos</a>
+  <div id="scene" aria-label="Cidade 3D explorável. Projetos e contribuições também disponíveis em listas acessíveis."></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="https://github.com/NiltonBarross" aria-label="Perfil de NiltonBarross no GitHub">N<span> / </span>L<span class="brand-caption">NILTON CITY</span></a>
+    <nav aria-label="Navegação principal">
+      <button id="projects-button" class="nav-link">Projetos <span id="project-count"></span></button>
+      <button id="about-button" class="nav-link">Sobre</button>
+      <a class="nav-link github" href="https://github.com/NiltonBarross">GitHub <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 4v-4a3.5 3.5 0 0 0-1-3c3 0 6-1 6-5a4 4 0 0 0-1-3 4 4 0 0 0 0-3s-1 0-3 1a11 11 0 0 0-6 0C8 3 7 3 7 3a4 4 0 0 0 0 3 4 4 0 0 0-1 3c0 4 3 5 6 5a3.5 3.5 0 0 0-1 3v4"/></svg></a>
+    </nav>
+  </header>
+  <main>
+    <section class="intro" id="intro" aria-labelledby="title">
+      <h1 id="title">NILTON<br><span>CITY.</span></h1>
+      <p class="identity">Nilton Luan <span>@NiltonBarross</span></p>
+      <p class="intro-role">Dados, automação <span>& IA.</span></p>
+      <p class="intro-copy">Cada contribuição, um pedaço da cidade.<br>Entre, dê uma volta e conheça o que eu construo.</p>
+      <div class="intro-actions"><button class="primary" id="start-button">Explorar a cidade <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 10 7-10 7z"/></svg></button><button id="directory-button" class="text-button">Ver os projetos</button></div>
+      <p class="loading" id="loading" role="status">Construindo a cidade…</p>
+    </section>
+    <div class="scene-label" id="scene-label" aria-hidden="true"><span class="label-line"></span><span>Seu próximo destino:<br><strong>um projeto de verdade.</strong></span></div>
+    <section id="drive-hud" class="drive-hud" aria-label="Controles de exploração" hidden>
+      <div class="drive-title"><strong>Boa volta pela cidade.</strong><span>Visite os prédios de projetos ou clique nas torres lilás.</span></div>
+      <div class="drive-actions"><button class="small-button" id="reset-button">Voltar ao início</button><button class="small-button" id="exit-button">Sair da exploração <kbd>Esc</kbd></button></div>
+    </section>
+    <div class="nearby" id="nearby" hidden><span id="nearby-name"></span><button class="primary" id="visit-button">Visitar projeto <kbd>E</kbd></button></div>
+    <div class="touch-controls" id="touch-controls" aria-label="Direção por toque" hidden>
+      <button data-direction="left" aria-label="Virar à esquerda"><svg viewBox="0 0 24 24"><path d="m14 5-7 7 7 7"/></svg></button>
+      <div><button data-direction="forward" aria-label="Avançar"><svg viewBox="0 0 24 24"><path d="m5 14 7-7 7 7"/></svg></button><button data-direction="back" aria-label="Dar ré"><svg viewBox="0 0 24 24"><path d="m5 10 7 7 7-7"/></svg></button></div>
+      <button data-direction="right" aria-label="Virar à direita"><svg viewBox="0 0 24 24"><path d="m10 5 7 7-7 7"/></svg></button>
+    </div>
+    <div class="bottom-bar">
+      <button id="activity-button" class="activity-link"><span class="activity-mark" aria-hidden="true"></span><span><strong id="activity-total">—</strong> contribuições <span class="activity-period">· últimos 12 meses</span></span></button>
+      <div class="controls-hint" id="controls-hint"><kbd>W A S D</kbd><span>ou setas para dirigir</span></div>
+      <button id="motion-button" class="motion-button" aria-pressed="false" aria-label="Movimento automático da câmera"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg><span>Movimento</span></button>
+    </div>
+    <aside id="fallback" class="fallback" hidden><p>A cidade 3D não pôde ser carregada neste navegador.</p><button id="fallback-projects" class="primary">Conhecer os projetos</button></aside>
+  </main>
+  <dialog id="directory-dialog" aria-labelledby="directory-title">
+    <div class="dialog-header"><h2 id="directory-title">PROJETOS NA CIDADE.</h2><button class="close-button" aria-label="Fechar projetos" data-close><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+    <p class="dialog-lead">Ferramentas para transformar dados em decisões e tarefas em tempo livre.</p>
+    <div id="project-list" tabindex="-1"></div>
+    <noscript><p>Ative JavaScript para explorar a cidade. Você também pode acessar todos os <a href="https://github.com/NiltonBarross?tab=repositories">projetos no GitHub</a>.</p></noscript>
+  </dialog>
+  <dialog id="detail-dialog" aria-labelledby="detail-title"><div class="dialog-header"><h2 id="detail-title"></h2><button class="close-button" aria-label="Fechar detalhes" data-close><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><p class="dialog-context" id="detail-category"></p><p id="detail-description" class="dialog-lead"></p><p id="detail-tech" class="tech"></p><a class="primary" id="detail-link" href="https://github.com/NiltonBarross">Abrir repositório</a></dialog>
+  <dialog id="about-dialog" aria-labelledby="about-title"><div class="dialog-header"><h2 id="about-title">OI, EU SOU NILTON LUAN.</h2><button class="close-button" aria-label="Fechar sobre" data-close><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><p class="dialog-lead">Sou @NiltonBarross no GitHub. Construo ferramentas de dados, automação e IA. Este é meu jeito de reunir projetos: uma cidade que você pode explorar.</p><p>Os prédios lilás representam dias com contribuições no GitHub. Os destinos coloridos são projetos reais; a orla e os demais edifícios compõem o cenário.</p><p>A cidade mostra um retrato da atividade, não um placar de experiência profissional.</p><a class="primary" href="https://github.com/NiltonBarross">Conhecer meu GitHub</a></dialog>
+  <dialog id="activity-dialog" aria-labelledby="activity-title"><div class="dialog-header"><h2 id="activity-title">A CIDADE EM DADOS.</h2><button class="close-button" aria-label="Fechar atividade" data-close><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><p id="snapshot-description" class="dialog-lead"></p><p>São contribuições contabilizadas pelo GitHub, não apenas commits. Cada torre lilás corresponde a um dia ativo; a altura cresce com a quantidade.</p><div id="activity-list"></div><a class="text-button" href="https://github.com/NiltonBarross?tab=overview">Conferir atividade no GitHub</a></dialog>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
