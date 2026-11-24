@@ -23,4 +23,9 @@ All four were corrected and recaptured. The follow-up reviewer scored all four r
 The selected Three.js 0.170.0 archive contains one self-contained build module, not a split core pair; the matching MIT license is included. Barlow/Barlow Condensed font files and OFL licenses are local. Profile banner is a capture of the project's original rendered scene with embedded origin metadata.
 
 ## Publication
-Pending live URL/readback checks at the time this document was first written.
+- GitHub Pages build completed with status built for static commit 2507816fe193e62b817b2221ed08f77c65592f88.
+- Public URL https://niltonbarross.github.io/nilton-city/ opened in browser; scene initialized, start and driving worked; no console errors observed in the checked live scene.
+- Public profile https://github.com/NiltonBarross shows the new README, full identity and six project links. Banner image loaded at natural width 1440px.
+- GitHub source: https://github.com/NiltonBarross/nilton-city.
+- Profile bio/name/blog account fields were not changed: account token lacked user scope. No broader scope was requested; the README is the personalized presentation.
+- Sites private copy: source commit 2c2d7cba69ce6aaf1fc5cbc9ea5c564ed04b424e and exact packaged archive submitted. Returned asynchronous deployment status pending at last observation. It is separate from the verified public Pages deployment.

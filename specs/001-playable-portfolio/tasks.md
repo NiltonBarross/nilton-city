@@ -18,12 +18,14 @@ Input: spec.md, plan.md, research.md, data-model.md and contracts/ui.md. All con
 
 ## Phase 5: US3 — Profile
 - [x] T008 [US3] Capture original built scene into profile/banner.jpg and create profile/README.md with factual portfolio description and project links.
-- [ ] T009 [US3] Publish profile README/assets to NiltonBarross/NiltonBarross and static site files to a separate public portfolio repository with GitHub Pages; verify source and live links.
+- [x] T009 [US3] Publish profile README/assets to NiltonBarross/NiltonBarross and static site files to a separate public portfolio repository with GitHub Pages; verify source and live links.
 
 ## Phase 6: Polish and publication
 - [x] T010 Verify Node checks and desktop/mobile browser journeys; record observations in docs/QA.md and fix material defects.
 - [x] T011 Run Impeccable detector and independent finish review; record shipped tokens in DESIGN.md and .impeccable/design.json.
 - [ ] T012 Register and publish a Sites preview using .openai/hosting.json and verified source package; report any environmental publication limitation.
+
+T012 status: source synchronized and exact archive submitted successfully; Sites returned asynchronous publication pending. Public GitHub Pages publication is independently verified and complete. Do not claim the private Sites copy is live until a terminal deployment result is observed.
 
 ## Dependencies & execution
 T001–T002 precede T003–T004. T005–T007 share foundation and integrate in sequence. T008 needs the rendered city. T009 follows QA. T010–T012 verify and publish. Independent opportunity: asset/data acquisition; no shared-file worker edits required.

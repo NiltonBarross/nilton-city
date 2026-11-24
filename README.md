@@ -37,3 +37,5 @@ Requer navegador com WebGL2 para a cidade. A lista de projetos continua disponí
 ## Créditos
 
 Referências indicadas pelo usuário: GitGTA e daanrox/gtavi. O código da cidade e sua geometria são originais; não foram copiados assets desses projetos ou da Rockstar. Three.js 0.170.0 mantém sua licença MIT em `dist/vendor/LICENSE`; fontes Barlow e Barlow Condensed mantêm as licenças OFL em `dist/vendor/`.
+
+O projeto apresentado como Job Hunter AI é um fork de `othiagom/automacao-busca-vagas`, identificado também no perfil. A seleção do portfólio reúne trabalho próprio e projetos explorados no GitHub, sem atribuir a autoria original de forks ao dono do perfil.

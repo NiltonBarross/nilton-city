@@ -20,7 +20,7 @@ Meu portfólio é uma cidade 3D: dê uma volta de carro, visite os prédios dos 
 | --- | --- | --- |
 | [Market Atlas](https://github.com/NiltonBarross/market-atlas) | Cenários territoriais de cobertura, aquisição e receita. | JavaScript · Leaflet |
 | [Mapa do Brasil](https://github.com/NiltonBarross/mapa-brasil) | Estados e municípios em um mapa coroplético interativo. | JavaScript · D3.js |
-| [Job Hunter AI](https://github.com/NiltonBarross/automacao-busca-vagas) | Coleta e classificação de vagas com IA e integração com planilhas. | Python · Playwright · Gemini |
+| [Job Hunter AI (fork)](https://github.com/NiltonBarross/automacao-busca-vagas) | Coleta e classificação de vagas com IA e integração com planilhas; fork de [othiagom](https://github.com/othiagom/automacao-busca-vagas). | Python · Playwright · Gemini |
 | [QR Code offline](https://github.com/NiltonBarross/gerador-qrcode-offline) | Geração e exportação de QR Codes direto no navegador. | HTML · JavaScript |
 | [Artigo para PDF](https://github.com/NiltonBarross/download-pdf-artigo-twitter) | Exportação de artigos longos do Twitter/X, mantendo texto e imagens. | Python · Playwright |
 | [Transcrições do YouTube](https://github.com/NiltonBarross/script_baixar_transcricao_youtube) | Exportação de transcrições pelo console do navegador. | JavaScript |
